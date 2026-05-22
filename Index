@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Desert Diamond AI Art</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #111;
+      color: white;
+    }
+    img {
+      width: 300px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+    .section {
+      margin: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Desert Diamond AI Automotive Art</h1>
+<p>Custom AI car artwork – realistic, high detail, Arizona-inspired</p>
+
+<div class="section">
+  <h2>My Work</h2>
+
+  <img src="image1.jpg">
+  <img src="image2.jpg">
+  <img src="image3.jpg">
+
+</div>
+
+<div class="section">
+  <h2>Order on Fiverr</h2>
+  <a href="YOUR_FIVERR_LINK" style="color:lime; font-size:20px;">
+    👉 Click Here to Order
+  </a>
+</div>
+
+</body>
+</html>
