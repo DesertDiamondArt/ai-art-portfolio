@@ -1,203 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<!-- =========================
+     BASIC PAGE SETUP
+========================= -->
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Desert Diamond Image Media</title>
 
+<!-- Fonts used for cinematic look -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
 
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
 
-    body {
-        font-family: Inter, sans-serif;
-        background: #0a0a0a;
-        color: #fff;
-        overflow-x: hidden;
-    }
+/* =========================
+   GLOBAL RESET (clean layout)
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    /* HERO */
-    .hero {
-        height: 100vh;
-        background: url('Banner.jpeg') center/cover no-repeat;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
+/* =========================
+   BASE PAGE STYLE
+========================= */
+body {
+    font-family: Inter, sans-serif;
+    background: #0a0a0a; /* dark cinematic background */
+    color: #fff;
+    overflow-x: hidden;
+}
 
-    .hero::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(circle at center, rgba(0,0,0,0.2), rgba(0,0,0,0.85));
-    }
+/* =========================
+   HERO SECTION (TOP BANNER)
+   This is the first thing users see
+========================= */
+.hero {
+    height: 100vh; /* full screen height */
+    background: url('Banner.jpeg') center/cover no-repeat; /* MAIN IMAGE */
+    position: relative;
 
-    .hero-content {
-        position: relative;
-        z-index: 2;
-    }
+    /* centers text perfectly */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
-    .hero h1 {
-        font-family: 'Bebas Neue', sans-serif;
-        font-size: 4rem;
-        letter-spacing: 2px;
-    }
+/* dark overlay so text is readable */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(0,0,0,0.2), rgba(0,0,0,0.85));
+}
 
-    .hero p {
-        margin-top: 10px;
-        font-size: 1.2rem;
-        opacity: 0.8;
-    }
+/* text container inside hero */
+.hero-content {
+    position: relative;
+    z-index: 2; /* keeps text above overlay */
+}
 
-    .buttons {
-        margin-top: 25px;
-    }
+/* big cinematic title */
+.hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4rem;
+    letter-spacing: 2px;
+}
 
-    .btn {
-        padding: 12px 20px;
-        margin: 5px;
-        border: 1px solid #d4af37;
-        background: transparent;
-        color: #fff;
-        cursor: pointer;
-        transition: 0.3s;
-    }
+/* subtitle under title */
+.hero p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
 
-    .btn:hover {
-        background: #d4af37;
-        color: #000;
-    }
+/* buttons under hero text */
+.buttons {
+    margin-top: 25px;
+}
 
-    /* SECTION */
-    section {
-        padding: 80px 10%;
-    }
+/* button style */
+.btn {
+    padding: 12px 20px;
+    margin: 5px;
+    border: 1px solid #d4af37; /* gold accent */
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-    h2 {
-        font-family: 'Bebas Neue', sans-serif;
-        font-size: 2.5rem;
-        margin-bottom: 30px;
-        letter-spacing: 2px;
-    }
+/* hover effect */
+.btn:hover {
+    background: #d4af37;
+    color: #000;
+}
 
-    /* COLLECTIONS */
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-    }
+/* =========================
+   SECTION LAYOUT (all sections)
+========================= */
+section {
+    padding: 80px 10%;
+}
 
-    .card {
-        position: relative;
-        overflow: hidden;
-        border-radius: 12px;
-        cursor: pointer;
-        text-decoration: none;
-        color: white;
-    }
+/* section titles */
+h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
 
-    .card img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        transition: transform 0.4s ease;
-        display: block;
-    }
+/* =========================
+   COLLECTION GRID (homepage cards)
+========================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
 
-    .card:hover img {
-        transform: scale(1.1);
-    }
+/* each collection card */
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
 
-    .card::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
-    }
+/* image inside card */
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    display: block;
+}
 
-    .card span {
-        position: absolute;
-        bottom: 15px;
-        left: 15px;
-        font-weight: 600;
-        z-index: 2;
-    }
+/* zoom effect on hover */
+.card:hover img {
+    transform: scale(1.1);
+}
 
-    /* SPOTLIGHT */
-    .spotlight {
-        background: #111;
-        padding: 80px 10%;
-        text-align: center;
-    }
+/* dark gradient overlay on images */
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
 
-    .spotlight img {
-        width: 100%;
-        max-height: 500px;
-        object-fit: cover;
-        border-radius: 15px;
-        margin-top: 20px;
-    }
+/* text label on card */
+.card span {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-weight: 600;
+    z-index: 2;
+}
 
-    /* CTA */
-    .cta {
-        text-align: center;
-        background: linear-gradient(135deg, #111, #000);
-        padding: 100px 10%;
-    }
+/* =========================
+   FEATURED SECTION (spotlight build)
+========================= */
+.spotlight {
+    background: #111;
+    padding: 80px 10%;
+    text-align: center;
+}
 
-    .cta h2 {
-        font-size: 3rem;
-    }
+/* featured image */
+.spotlight img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-top: 20px;
+}
 
-    .cta p {
-        margin-top: 15px;
-        opacity: 0.8;
-    }
+/* =========================
+   CTA SECTION (Fiverr / commissions)
+========================= */
+.cta {
+    text-align: center;
+    background: linear-gradient(135deg, #111, #000);
+    padding: 100px 10%;
+}
 
-    @media (max-width: 768px) {
-        .hero h1 { font-size: 2.5rem; }
-    }
+/* big CTA title */
+.cta h2 {
+    font-size: 3rem;
+}
+
+/* CTA description */
+.cta p {
+    margin-top: 15px;
+    opacity: 0.8;
+}
+
+/* =========================
+   MOBILE RESPONSIVE FIX
+========================= */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+}
+
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
+<!-- =========================
+     HERO SECTION
+     Change Banner.jpeg to your main image
+========================= -->
 <div class="hero">
     <div class="hero-content">
+
         <h1>DESERT DIAMOND IMAGE MEDIA</h1>
+
         <p>AI-Crafted Automotive & Cinematic Desert Art</p>
 
         <div class="buttons">
             <button class="btn">View Collections</button>
             <button class="btn">Commission Work</button>
         </div>
+
     </div>
 </div>
 
-<!-- COLLECTIONS (CLEAN VERSION ONLY) -->
+<!-- =========================
+     COLLECTIONS SECTION (IMPORTANT)
+     Each card links to a NEW PAGE
+     Each image comes from /collections/
+========================= -->
 <section>
     <h2>COLLECTIONS</h2>
 
     <div class="grid">
 
+        <!-- Collection 1 -->
         <a href="desert-racing.html" class="card">
             <img src="collections/desert-racing/cover.jpg">
             <span>Desert Racing Series</span>
         </a>
 
+        <!-- Collection 2 -->
         <a href="funny-cars.html" class="card">
             <img src="collections/funny-cars/cover.jpg">
             <span>Funny Car Legends</span>
         </a>
 
+        <!-- Collection 3 -->
         <a href="concept-builds.html" class="card">
             <img src="collections/concept-builds/cover.jpg">
             <span>AI Concept Builds</span>
@@ -206,17 +264,24 @@
     </div>
 </section>
 
-<!-- SPOTLIGHT -->
+<!-- =========================
+     FEATURED BUILD SECTION
+========================= -->
 <section class="spotlight">
     <h2>FEATURED BUILD</h2>
     <p>74 Vega — John Force Inspired Pro Mod Concept</p>
+
+    <!-- Replace spotlight.jpg with your best image -->
     <img src="spotlight.jpg" />
 </section>
 
-<!-- CTA -->
+<!-- =========================
+     CTA SECTION (SELLING POINT)
+========================= -->
 <section class="cta">
     <h2>COMMISSION CUSTOM AI ART</h2>
     <p>High-end cinematic automotive artwork for collectors, brands, and creators.</p>
+
     <button class="btn">Order on Fiverr</button>
 </section>
 
