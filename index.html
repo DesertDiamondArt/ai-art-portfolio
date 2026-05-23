@@ -4,7 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Desert Diamond Image Media</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+
 <style>
     * {
         margin: 0;
@@ -40,7 +42,6 @@
     .hero-content {
         position: relative;
         z-index: 2;
-        animation: fadeUp 1.5s ease-out;
     }
 
     .hero h1 {
@@ -98,6 +99,8 @@
         overflow: hidden;
         border-radius: 12px;
         cursor: pointer;
+        text-decoration: none;
+        color: white;
     }
 
     .card img {
@@ -105,6 +108,7 @@
         height: 300px;
         object-fit: cover;
         transition: transform 0.4s ease;
+        display: block;
     }
 
     .card:hover img {
@@ -141,24 +145,7 @@
         margin-top: 20px;
     }
 
-    /* GALLERY */
-    .gallery {
-        column-count: 3;
-        column-gap: 15px;
-    }
-
-    .gallery img {
-        width: 100%;
-        margin-bottom: 15px;
-        border-radius: 10px;
-        transition: transform 0.3s;
-    }
-
-    .gallery img:hover {
-        transform: scale(1.02);
-    }
-
-    /* COMMISSION */
+    /* CTA */
     .cta {
         text-align: center;
         background: linear-gradient(135deg, #111, #000);
@@ -174,17 +161,12 @@
         opacity: 0.8;
     }
 
-    @keyframes fadeUp {
-        from {opacity: 0; transform: translateY(30px);}
-        to {opacity: 1; transform: translateY(0);}
-    }
-
     @media (max-width: 768px) {
         .hero h1 { font-size: 2.5rem; }
-        .gallery { column-count: 1; }
     }
 </style>
 </head>
+
 <body>
 
 <!-- HERO -->
@@ -192,6 +174,7 @@
     <div class="hero-content">
         <h1>DESERT DIAMOND IMAGE MEDIA</h1>
         <p>AI-Crafted Automotive & Cinematic Desert Art</p>
+
         <div class="buttons">
             <button class="btn">View Collections</button>
             <button class="btn">Commission Work</button>
@@ -199,32 +182,7 @@
     </div>
 </div>
 
-<!-- COLLECTIONS -->
-<section>
-    <h2>COLLECTIONS</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="img1.jpg" />
-            <span>Desert Racing Series</span>
-        </div>
-        <div class="card">
-            <img src="img2.jpg" />
-            <span>Funny Car Legends</span>
-        </div>
-        <div class="card">
-            <img src="img3.jpg" />
-            <span>AI Concept Builds</span>
-        </div>
-    </div>
-</section>
-
-<!-- SPOTLIGHT -->
-<section class="spotlight">
-    <h2>FEATURED BUILD</h2>
-    <p>74 Vega — John Force Inspired Pro Mod Concept</p>
-    <img src="spotlight.jpg" />
-</section>
-
+<!-- COLLECTIONS (CLEAN VERSION ONLY) -->
 <section>
     <h2>COLLECTIONS</h2>
 
@@ -246,6 +204,13 @@
         </a>
 
     </div>
+</section>
+
+<!-- SPOTLIGHT -->
+<section class="spotlight">
+    <h2>FEATURED BUILD</h2>
+    <p>74 Vega — John Force Inspired Pro Mod Concept</p>
+    <img src="spotlight.jpg" />
 </section>
 
 <!-- CTA -->
