@@ -1,14 +1,67 @@
-html<!-- Single featured image -->
-<div style="text-align: center; padding: 20px;">
-  <img src="drag-racing.jpeg" 
-       alt="Drag Racing AI Art" 
-       style="max-width: 100%; border-radius: 10px;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Muscle Cars / Resto Mods | Desert Diamond Image Media</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Inter, sans-serif; background: #0a0a0a; color: #fff; }
+h1 { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; letter-spacing: 2px; text-align: center; padding: 40px 0 10px; }
+.subtitle { text-align: center; opacity: 0.7; margin-bottom: 40px; }
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    padding: 20px 5%;
+}
+.gallery a {
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+.gallery a:hover img {
+    transform: scale(1.05);
+}
+.home-btn {
+    display: inline-block;
+    margin: 30px auto;
+    padding: 10px 24px;
+    border: 1px solid #d4af37;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.home-btn:hover { background: #d4af37; color: #000; }
+.nav { text-align: center; padding: 20px; }
+</style>
+</head>
+<body>
+
+<div class="nav">
+    <a href="index.html" class="home-btn">← Home</a>
 </div>
 
-<!-- If you want to show more images from your repo too -->
-<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; padding: 20px;">
-  <img src="rednova.jpeg" alt="Drag Racing" style="width: 100%; border-radius: 8px;">
-  <img src="redchevelle.jpeg" alt="Art 1" style="width: 100%; border-radius: 8px;">
-  <img src="blackBelair.jpeg" alt="Art 2" style="width: 100%; border-radius: 8px;">
-  <img src="OrangeNova.jpeg" alt="Art 3" style="width: 100%; border-radius: 8px;">
+<h1>MUSCLE CARS / RESTO MODS</h1>
+<p class="subtitle">AI-Crafted Muscle Car Art</p>
+
+<div class="gallery">
+    <a href="restomod.jpeg" target="_blank"><img src="restomod.jpeg" alt="Resto Mod"></a>
+    <a href="rednova.jpeg" target="_blank"><img src="rednova.jpeg" alt="Red Nova"></a>
+    <a href="redchevelle.jpeg" target="_blank"><img src="redchevelle.jpeg" alt="Red Chevelle"></a>
+    <a href="blackBelair.jpeg" target="_blank"><img src="blackBelair.jpeg" alt="Black Bel Air"></a>
+    <a href="OrangeNova.jpeg" target="_blank"><img src="OrangeNova.jpeg" alt="Orange Nova"></a>
+    <!-- Add more images here as you upload them -->
 </div>
+
+</body>
+</html>
