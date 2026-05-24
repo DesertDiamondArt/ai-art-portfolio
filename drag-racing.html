@@ -16,10 +16,20 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; letter-spacing: 2px
     gap: 16px;
     padding: 20px 5%;
 }
+.gallery a {
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+}
 .gallery img {
     width: 100%;
     border-radius: 8px;
     object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+}
+.gallery a:hover img {
+    transform: scale(1.05);
 }
 .home-btn {
     display: inline-block;
@@ -45,9 +55,11 @@ h1 { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; letter-spacing: 2px
 <p class="subtitle">AI-Crafted Drag Racing Art</p>
 
 <div class="gallery">
-    <img src="dragracing.jpeg" alt="Drag Racing AI Art">
-    <img src="peakvegafunnycar.jpg" alt="Peak Vega Funny Car">
-    <!-- Add more images here as you upload them -->
+    <a href="dragracing.jpeg" target="_blank"><img src="dragracing.jpeg" alt="Drag Racing"></a>
+    <a href="peakvegafunnycar.jpg" target="_blank"><img src="peakvegafunnycar.jpg" alt="Peak Vega Funny Car"></a>
+    <!-- Add more images here as you upload them:
+    <a href="newimage.jpeg" target="_blank"><img src="newimage.jpeg" alt="Description"></a>
+    -->
 </div>
 
 </body>
